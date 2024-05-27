@@ -1,0 +1,324 @@
+:root {
+  --Dark-Blue-singup/* (intro and email sign up background)*/: hsl(
+    217,
+    28%,
+    15%
+  );
+  --Dark-Blue-bg/* (main background)*/ : hsl(218, 28%, 13%);
+  --Dark-Blue-footer/* (footer background)*/ : hsl(216, 53%, 9%);
+  --Dark-Blue-test/* (test imonials background)*/: hsl(219, 30%, 18%);
+  --Cyan/*(inside call-to-action gradient)*/: hsl(176, 68%, 64%);
+  --Blue/*(inside call-to-action gradient)*/: hsl(198, 60%, 50%);
+  --error-Red/*(error)*/: hsl(0, 100%, 63%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: Raleway;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-ac {
+  display: flex;
+  align-items: center;
+}
+body {
+  background-color: var(--Dark-Blue-bg);
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
+}
+header {
+  width: 100%;
+  height: 100vh;
+  padding: 20px 40px 0;
+  flex-direction: column;
+  background-color: var(--Dark-Blue-test);
+  background-image: url("../images/bg-curvy-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  nav {
+    width: 100%;
+    height: 10%;
+    img {
+      height: 30px;
+    }
+    ul {
+      margin-left: auto;
+      li {
+        color: var(--White);
+        opacity: 0.8;
+        list-style-type: none;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 16px;
+  }
+  > img,
+  > p,
+  > h1 {
+    width: 405px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--White);
+  }
+  button {
+    padding: 10px 50px;
+    border-radius: 20px;
+    background-color: var(--Cyan);
+    color: var(--White);
+  }
+}
+.first {
+  height: 100vh;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 300px);
+  grid-template-rows: repeat(2, 200px);
+  justify-content: center;
+  align-content: center;
+  div {
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    color: var(--White);
+    text-align: center;
+    * {
+      margin-bottom: 10px;
+    }
+    h4 {
+      opacity: 0.9;
+    }
+    p {
+      opacity: 0.7;
+      font-size: 15px;
+    }
+  }
+}
+.second {
+  width: 100%;
+  height: 100vh;
+  justify-content: space-between;
+  padding-inline: 30px;
+  > img {
+    width: 40%;
+    margin-inline: auto;
+  }
+  article {
+    width: 50%;
+    > * {
+      margin-bottom: 10px;
+      color: var(--White);
+    }
+    h1 {
+      font-size: 2.5rem;
+      width: 70%;
+    }
+    p {
+      opacity: 0.8;
+    }
+  }
+  div {
+    width: max-content;
+    position: relative;
+    p {
+      margin-right: 10px;
+    }
+    &::before {
+      content: "";
+      width: 0%;
+      height: 2px;
+      background-color: var(--White);
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+    }
+    &:hover {
+      cursor: pointer;
+      &::before {
+        transition: 0.5s;
+        width: 100%;
+      }
+    }
+  }
+}
+.third {
+  width: 100%;
+  height: max-content;
+  margin-block: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 310px);
+  justify-content: space-between;
+  padding-inline: 80px;
+  align-items: center;
+  background-image: url("../images/bg-quotes.png");
+  background-repeat: no-repeat;
+  background-position: 60px 0px;
+  padding-block: 30px;
+  article {
+    border-radius: 20px;
+    background-color: var(--Dark-Blue-test);
+    width: 100%;
+    height: max-content;
+    padding: 20px;
+    p {
+      color: var(--White);
+      opacity: 0.9;
+      font-size: 15px;
+    }
+    > p {
+      margin-bottom: 15px;
+    }
+    > div {
+      img {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+        border-radius: 50%;
+      }
+      p:first-child {
+        opacity: 1;
+      }
+    }
+  }
+}
+.last {
+  height: max-content;
+  display: flex;
+  article {
+    width: 550px;
+    height: max-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-inline: auto;
+    transform: translateY(50%);
+    text-align: center;
+    color: var(--White);
+    background-color: var(--Dark-Blue-bg);
+    box-shadow: 0px 0px 10px 3px var(--Dark-Blue-footer);
+    p {
+      margin-block: 20px;
+      opacity: 0.8;
+      font-size: small;
+    }
+    div {
+      * {
+        height: 40px;
+        margin-right: 15px;
+        border-radius: 20px;
+      }
+      input {
+        width: 300px;
+        padding-left: 10px;
+        background-color: var(--White);
+      }
+      button {
+        padding: 10px 20px;
+        background-color: var(--Blue);
+        color: var(--White);
+        font-weight: 700;
+        &:hover {
+          cursor: pointer;
+          transition: 0.4s;
+          background-color: var(--Cyan);
+        }
+      }
+      &.error {
+        position: relative;
+        padding-bottom: 15px;
+        &::before {
+          content: "Please Enter a valid email address";
+          position: absolute;
+          bottom: 0px;
+          font-size: 10px;
+          color: var(--error-Red);
+          left: 20px;
+        }
+      }
+    }
+  }
+}
+footer {
+  background-color: var(--Dark-Blue-footer);
+  padding-top: 100px;
+  padding-inline: 50px;
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+  aside {
+    width: 30%;
+    font-size: 14px;
+    > img {
+      width: 100px;
+    }
+    div {
+      display: flex;
+      margin-top: 10px;
+      color: var(--White);
+      opacity: 0.7;
+      img {
+        width: 40px;
+        height: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+  article {
+    width: max-content;
+    div {
+      display: flex;
+      margin-bottom: 15px;
+      color: var(--White);
+      opacity: 0.7;
+      img {
+        width: 20px;
+        margin-right: 20px;
+      }
+    }
+  }
+  ul {
+    li {
+      list-style-type: none;
+      margin-bottom: 15px;
+      color: var(--White);
+      opacity: 0.7;
+      &:hover {
+        cursor: pointer;
+        transition: 0.4s;
+        opacity: 1;
+      }
+    }
+  }
+  > div {
+    display: flex;
+    i {
+      margin-right: 10px;
+      color: var(--White);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid var(--White);
+      &:hover {
+        cursor: pointer;
+        transition: 0.4s;
+        color: var(--Blue);
+        border-color: var(--Blue);
+      }
+    }
+  }
+}
